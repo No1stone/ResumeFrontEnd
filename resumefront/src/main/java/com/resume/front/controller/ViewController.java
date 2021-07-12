@@ -11,7 +11,16 @@ public class ViewController {
 
 	private static final Logger log = LoggerFactory.getLogger(ViewController.class);
 
-	@RequestMapping(value="/login")
+	@RequestMapping(value="/")
+	public String login() {
+	  
+		log.info("index: ----{}");
+		
+	    return "index";
+	}
+	
+	
+	@RequestMapping(value="/kakao")
 	public String login(@RequestParam("code") String code) {
 	  
 		log.info("kakaoCode: ----{}",code);
